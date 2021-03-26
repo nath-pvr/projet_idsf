@@ -1,0 +1,133 @@
+/*
+Theme name: IDSF
+Version: 1
+Requires PHP: 7.4.9
+Description: Theme created for the etablishment of the site of the Institute for the Development of Sport by the Formation of the Bourgogne Franche-Comté handball league.
+Created date: 2021, March.
+Author: POUVRASSEAU Nathalie.  
+*/
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital@1&display=swap');
+
+
+html{
+    --color-dark :#070301; 
+    --color-blue :#0F1B5C;
+    --color-gold:#F4DB31!important;
+    --color-grey: #8E9091;    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+ul, li{
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+}
+
+nav,
+#footer{
+    background-color: var(--color-dark);
+}
+
+#temoignages{
+    background-color: var(--color-blue);
+}
+
+#temoignages h2 {
+    color: var(--color-gold);
+}
+
+#temoignages .card{
+    border-color: var(--color-gold);
+}
+
+#actu h2 {
+    color: var(--color-blue);
+}
+
+#footer span, #footer i{
+    color: var(--color-gold);
+    text-align: justify;
+}
+
+#RS i{
+    font-size: 1.5rem;
+}
+
+.bg-blue{
+    background-color: var(--color-blue)!important;
+}
+
+.nav-link{
+    color: white!important;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+.nav-link:hover{
+    color: var(--color-gold)!important;
+}
+
+.white{
+    color: white!important;
+}
+
+.search-bar{
+    background-color: var(--color-grey)!important;
+    border-color: var(--color-gold)!important;
+}
+.search-bar:focus{
+    background-color: white!important;
+    box-shadow: 0 0 0 0.25rem var(--color-gold)!important;
+}
+
+.search-bar::placeholder{
+    color: white!important;
+}
+
+.btn-gold{
+    color: var(--color-blue)!important;
+    border-color: var(--color-gold)!important;
+}
+
+.btn-gold:hover{
+    color: white!important;
+    background-color: var(--color-gold);
+}
+
+.d-none{
+    display: none;
+}
+
+.menu-back{
+    position: absolute;
+    width: 10rem;
+    border-radius: 5%;
+    background-color: #303440!important;
+    transition: all 0.5s ease;
+    top: 0;
+    transform: translate(40px, 80px);
+}
+
+.menu-back li{
+    transform: translateX(-90px);
+}
+
+.menu-back .nav-link{
+    font-size: 1rem;
+}
+
+#carousel{
+    height: 20rem;
+    /* background-color: var(--color-blue); */
+}
