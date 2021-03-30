@@ -69,15 +69,15 @@
 
 
     <nav class="navbar navbar-expand-lg bg-nav ">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-5" href="<?= get_home_url() ?>"><img width="auto" height="100" src="<?php bloginfo('template_url'); ?>/assets/img/IDSF_TxtW.png" alt=""></a>
+        <div class="container-fluid d-flex align-items-end">
+            <a class="navbar-brand ms-5" href="<?= get_home_url() ?>"><img width="200px" src="<?php bloginfo('template_url'); ?>/assets/img/IDSF_TxtW.png" alt=""></a>
 
 
             <div class="collapse navbar-collapse justify-content-end row" id="navbarNav">
                 <?php wp_nav_menu([
                     'theme_location' => 'header',
                     'container' => false,
-                    'menu_class' => 'navbar-nav justify-content-end ',
+                    'menu_class' => 'navbar-nav justify-content-end',
                 ]) ?></div>
         </div>
     </nav>

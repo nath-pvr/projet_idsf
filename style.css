@@ -39,15 +39,15 @@ nav,
     background-color: var(--color-dark);
 }
 
-#temoignages{
+#temoignages, #featured{
     background-color: var(--color-blue);
 }
 
-#temoignages h2 {
+#temoignages h2, #featured h2{
     color: var(--color-gold);
 }
 
-#temoignages .card{
+#temoignages .card, #featured .card{
     border-color: var(--color-gold);
 }
 
@@ -115,8 +115,7 @@ nav,
     border-radius: 5%;
     background-color: #303440!important;
     transition: all 0.5s ease;
-    top: 0;
-    transform: translate(40px, 80px);
+    transform: translateX(40px);
 }
 
 .menu-back li{
@@ -129,5 +128,5 @@ nav,
 
 #carousel{
     height: 20rem;
-    /* background-color: var(--color-blue); */
+    background-color: var(--color-blue);
 }

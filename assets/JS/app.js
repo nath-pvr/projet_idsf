@@ -17,7 +17,22 @@ menus.forEach(menu =>
         submenus.forEach(submenu =>
             submenu.classList.add('menu-back')
         );
-
     })
 );
 
+submenus.forEach(submenu =>
+    submenu.addEventListener('mouseleave', e => {
+        submenus.forEach(submenu =>
+            submenu.classList.toggle('d-none')
+        );
+    })
+);
+
+
+// menus.forEach(menu =>
+//     menu.addEventListener('mouseout', e => {
+//         submenus.forEach(submenu =>
+//             submenu.classList.toggle('d-none')
+//         );
+//     })
+// );

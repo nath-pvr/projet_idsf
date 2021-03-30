@@ -19,6 +19,8 @@ function idsfTheme_supports_init()
     * Create custom post type
     */
 
+    //IDSF
+
     $labelsIdsf = array(
         'singular_name'     => _x('IDSF', 'Post Type Singular Name'),
         'menu_name'         => __('IDSF'),
@@ -42,6 +44,9 @@ function idsfTheme_supports_init()
 
     );
 
+           
+
+    //FORMATIONS
     $labelsFormation = array(
         'singular_name'     => _x('formation', 'Post Type Singular Name'),
         'menu_name'         => __('Formation'),
@@ -65,6 +70,8 @@ function idsfTheme_supports_init()
 
     );
 
+
+    //FINANCEMENT
     $labelsFinancement = array(
         'singular_name'     => _x('financement', 'Post Type Singular Name'),
         'menu_name'         => __('Financement'),
@@ -88,6 +95,8 @@ function idsfTheme_supports_init()
 
     );
 
+
+    //EMPLOIS
     $labelsEmplois = array(
         'singular_name'     => _x('emplois', 'Post Type Singular Name'),
         'menu_name'         => __('Emplois'),
@@ -111,6 +120,8 @@ function idsfTheme_supports_init()
 
     );
 
+
+    //RESSOURCES
     $labelsRessources = array(
         'singular_name'     => _x('ressource', 'Post Type Singular Name'),
         'menu_name'         => __('Ressources'),
@@ -134,6 +145,8 @@ function idsfTheme_supports_init()
 
     );
 
+
+    //MOOCS
     $labelsMoocs = array(
         'singular_name'     => _x('mooc', 'Post Type Singular Name'),
         'menu_name'         => __('Moocs'),
@@ -157,6 +170,8 @@ function idsfTheme_supports_init()
 
     );
 
+
+    //TEMOIGNAGES
     $labelsTemoignages = array(
         'singular_name'     => _x('temoignage', 'Post Type Singular Name'),
         'menu_name'         => __('Temoignages'),
@@ -178,6 +193,8 @@ function idsfTheme_supports_init()
         'show_in_nav_menus' => true,
 
     );
+
+
 
     register_post_type('idsf', $argsIdsf);
     register_post_type('formation', $argsFormation);

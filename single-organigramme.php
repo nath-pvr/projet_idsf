@@ -7,7 +7,7 @@ get_header() ?>
     <div class="row flex-row-reverse">
 
         <?php
-        get_template_part("includes/part", "accesRap");
+        get_template_part("includes", "accesRap-part");
         ?>
 
         <div class="col-lg-8">
@@ -39,15 +39,16 @@ get_header() ?>
                                 <h5 class="card-title"><?= the_title() ?></h5>
                             </div>
                         </div>
-                    </div>
-            <?php endwhile;
+                <?php endwhile;
             endif; ?>
+                    </div>
+
         </div>
     </div>
 </div>
 
 <?php
-get_template_part("includes/part", "featured");
+    get_template_part("includes", "featured-part");
 ?>
 
 

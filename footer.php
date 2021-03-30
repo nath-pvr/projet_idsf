@@ -2,8 +2,8 @@
 <?php wp_footer() ?>
 
 <section id="footer" class="row">
-    <div class="col-lg-3 my-auto">
-        <a class="ms-5" href="<?= get_home_url() ?>"><img class="" width="auto" height="150" src="<?php bloginfo('template_url'); ?>/assets/img/IDSF_TxtW.png" alt=""></a>
+    <div class="col-lg-3 mt-5">
+        <a class="ms-5" href="<?= get_home_url() ?>"><img class="" width="200px" src="<?php bloginfo('template_url'); ?>/assets/img/IDSFByLBFC3.png" alt=""></a>
     </div>
 
     <div id="coordo" class=" row mt-5 col-lg-6">
