@@ -1,38 +1,36 @@
-const menus = document.querySelectorAll('.menu-item-has-children');
 const submenus = document.querySelectorAll('.sub-menu');
+const menus = document.querySelectorAll('.menu-item-has-children');
 
-console.log(menus);
-console.log(submenus);
 
-submenus.forEach(submenu =>
-    submenu.classList.add('d-none')
-);
 
-menus.forEach(menu =>
+
+submenus.forEach(submenu => {
+    submenu.classList.add('d-none'),
+
+        submenu.addEventListener('mouseleave', e => {
+
+            submenu.classList.add('d-none'),
+                submenu.classList.remove('menu-back')
+        })
+});
+
+menus.forEach(menu => {
     menu.addEventListener('mouseenter', e => {
-        submenus.forEach(submenu =>
-            submenu.classList.toggle('d-none')
-        );
+        menu.classList.add('active');
 
-        submenus.forEach(submenu =>
-            submenu.classList.add('menu-back')
-        );
+        submenus.forEach(submenu => {
+
+            if (submenu.parentElement.classList.contains('active')) {
+                submenu.classList.remove('d-none'),
+                    submenu.classList.add('menu-back')
+            };
+        })
+
+    });
+
+    menu.addEventListener('mouseleave', e => {
+        menu.classList.remove('active');
+        menu.children[1].classList.add('d-none');
+        menu.children[1].classList.remove('menu-back');
     })
-);
-
-submenus.forEach(submenu =>
-    submenu.addEventListener('mouseleave', e => {
-        submenus.forEach(submenu =>
-            submenu.classList.toggle('d-none')
-        );
-    })
-);
-
-
-// menus.forEach(menu =>
-//     menu.addEventListener('mouseout', e => {
-//         submenus.forEach(submenu =>
-//             submenu.classList.toggle('d-none')
-//         );
-//     })
-// );
+});

@@ -1,18 +1,18 @@
-<div id="accesRap" class="col-lg-3 offset-1 d-grid gap-3">
+<div id="accesRap" class="col-lg-3 offset-1 d-flex flex-column justify-content-around">
 
-            <div class="card">
+            <div class="card shadow d-flex align-items-center">
                 <div class="card-body">
                     <a href="">Formations</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card shadow d-flex align-items-center">
                 <div class="card-body">
                     <a href="">Financement</a>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card shadow d-flex align-items-center">
                 <div class="card-body">
                     <a href="">Emplois</a>
                 </div>

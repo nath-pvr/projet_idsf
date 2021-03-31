@@ -28,7 +28,7 @@
                                 'post_type'         => 'attachment',
                                 'post_mime_type'    => 'image',
                                 'post_status'       => 'inherit',
-                                'posts_per_page'    => '-5',
+                                'posts_per_page'    => -1,
                                 'fields'            => 'ids',
                             )
                         );

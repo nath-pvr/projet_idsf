@@ -44,7 +44,23 @@ function idsfTheme_supports_init()
 
     );
 
-           
+           //Taxonomies
+
+           $taxoOrga = array(
+               "label"          => "Organigramme",
+               "labels"         => array(
+                    "name"           => "Organigramme",
+                    "all_items"      => "Tout l'organigramme",
+                    "edit_item"      => "Éditer l'organigramme",
+                    "view_item"      => "Voir l'organigramme",
+                    "update_item"    => "Mettre à jour l'organigramme",
+                    "add_new_item"   => "Ajouter un rôle",
+                    "search_item"    => "Rehercher dans l'organigramme"),
+                "hierarchical"  => true,
+                "show_in_menu"  => true,
+                "show_in_rest"  => true,
+                "rewrite"       => array('slug' => 'organigramme'),
+            );
 
     //FORMATIONS
     $labelsFormation = array(
@@ -197,6 +213,8 @@ function idsfTheme_supports_init()
 
 
     register_post_type('idsf', $argsIdsf);
+    register_taxonomy('organigramme', 'idsf', $taxoOrga );
+
     register_post_type('formation', $argsFormation);
     register_post_type('financement', $argsFinancement);
     register_post_type('emplois', $argsEmplois);

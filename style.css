@@ -12,12 +12,13 @@ Author: POUVRASSEAU Nathalie.
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital@1&display=swap');
 
-
+/* General */
 html{
     --color-dark :#070301; 
     --color-blue :#0F1B5C;
     --color-gold:#F4DB31!important;
-    --color-grey: #8E9091;    
+    --color-grey: #8E9091;
+    --color-blue-grey:#303440;    
 }
 
 body{
@@ -34,10 +35,60 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Lato', sans-serif;
 }
 
+.bg-blue{
+    background-color: var(--color-blue)!important;
+}
+
+.white{
+    color: white!important;
+}
+
+/* Menus */
+
 nav,
 #footer{
     background-color: var(--color-dark);
 }
+
+.nav-link{
+    color: white!important;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+.nav-link:hover{
+    color: var(--color-gold)!important;
+}
+
+#footer span, #footer i{
+    color: var(--color-gold);
+    text-align: justify;
+}
+
+#RS i{
+    font-size: 1.5rem;
+}
+
+
+.menu-back{
+    position: absolute;
+    width: 10rem;
+    border-radius: 5%;
+    background-color: var(--color-blue-grey)!important;
+    transition: all 0.5s ease;
+    transform: translateX(40px);
+    z-index: 50;
+}
+
+.menu-back li{
+    transform: translateX(-90px);
+}
+
+.menu-back .nav-link{
+    font-size: 1rem;
+}
+
+/* Sections */
 
 #temoignages, #featured{
     background-color: var(--color-blue);
@@ -55,32 +106,7 @@ nav,
     color: var(--color-blue);
 }
 
-#footer span, #footer i{
-    color: var(--color-gold);
-    text-align: justify;
-}
-
-#RS i{
-    font-size: 1.5rem;
-}
-
-.bg-blue{
-    background-color: var(--color-blue)!important;
-}
-
-.nav-link{
-    color: white!important;
-    font-size: 1.5rem;
-    margin-left: 5rem;
-}
-
-.nav-link:hover{
-    color: var(--color-gold)!important;
-}
-
-.white{
-    color: white!important;
-}
+/* SearchBar */
 
 .search-bar{
     background-color: var(--color-grey)!important;
@@ -95,6 +121,9 @@ nav,
     color: white!important;
 }
 
+
+/* button */
+
 .btn-gold{
     color: var(--color-blue)!important;
     border-color: var(--color-gold)!important;
@@ -105,28 +134,27 @@ nav,
     background-color: var(--color-gold);
 }
 
-.d-none{
-    display: none;
-}
 
-.menu-back{
-    position: absolute;
-    width: 10rem;
-    border-radius: 5%;
-    background-color: #303440!important;
-    transition: all 0.5s ease;
-    transform: translateX(40px);
-}
-
-.menu-back li{
-    transform: translateX(-90px);
-}
-
-.menu-back .nav-link{
-    font-size: 1rem;
-}
-
+/* Front-page */
 #carousel{
     height: 20rem;
     background-color: var(--color-blue);
 }
+
+/* part-accesRap */
+
+#accesRap .card-body a{
+    color: var(--color-blue);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+}
+
+#accesRap .card:hover{
+    background-color: var(--color-blue-grey);
+}
+
+#accesRap .card:hover a{
+    color: var(--color-gold);
+}
+
