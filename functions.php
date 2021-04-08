@@ -62,6 +62,22 @@ function idsfTheme_supports_init()
                 "rewrite"       => array('slug' => 'organigramme'),
             );
 
+           $taxoSites = array(
+               "label"          => "Sites",
+               "labels"         => array(
+                    "name"           => "Sites",
+                    "all_items"      => "Tous les sites",
+                    "edit_item"      => "Éditer un site",
+                    "view_item"      => "Voir les sites",
+                    "update_item"    => "Mettre à jour les sites",
+                    "add_new_item"   => "Ajouter un nouveau site/lieu",
+                    "search_item"    => "Rehercher dans les sites"),
+                "hierarchical"  => true,
+                "show_in_menu"  => true,
+                "show_in_rest"  => true,
+                "rewrite"       => array('slug' => 'sites'),
+            );
+
     //FORMATIONS
     $labelsFormation = array(
         'singular_name'     => _x('formation', 'Post Type Singular Name'),
@@ -85,6 +101,84 @@ function idsfTheme_supports_init()
         'show_in_nav_menus' => true,
 
     );
+
+            //Taxonomy
+            $taxoFormEtat = array(
+                "label"          => "Formations d'État",
+                "labels"         => array(
+                     "name"           => "Formations d'État",
+                     "all_items"      => "Toutes les Formations d'État",
+                     "edit_item"      => "Éditer une Formations d'État",
+                     "view_item"      => "Voir les Formations d'État",
+                     "update_item"    => "Mettre à jour les Formations d'État",
+                     "add_new_item"   => "Ajouter une nouvelle Formation d'État",
+                     "search_item"    => "Rehercher dans les Formations d'État"),
+                 "hierarchical"  => true,
+                 "show_in_menu"  => true,
+                 "show_in_rest"  => true,
+                 "show_admin_column" => true,
+                 "rewrite"       => array('slug' => 'formation-etat'),
+             );
+
+            $taxoFormFedeHB = array(
+                "label"          => "Formations Federales Handball",
+                "labels"         => array(
+                     "name"           => "Formations Féderales Handball",
+                     "all_items"      => "Toutes les Formations Federales Handball",
+                     "edit_item"      => "Éditer une Formation Federale Handball",
+                     "view_item"      => "Voir les Formations Federales Handball",
+                     "update_item"    => "Mettre à jour les Formations Federales Handball",
+                     "add_new_item"   => "Ajouter une nouvelle Formation Federale Handball",
+                     "search_item"    => "Rehercher dans les Formations Federales Handball"),
+                 "hierarchical"  => true,
+                 "show_in_menu"  => true,
+                 "show_in_rest"  => true,
+                 "show_admin_column" => true,
+                 "rewrite"       => array('slug' => 'formation-federale-hb'),
+            );
+
+            $taxoFormContinue = array(
+                "label"          => "Formations Modulaires",
+                "labels"         => array(
+                     "name"           => "Formations Continues",
+                     "all_items"      => "Toutes les Formations Continues"),
+                 "hierarchical"  => true,
+                 "show_in_menu"  => true,
+                 "show_in_rest"  => true,
+                 "show_admin_column" => true,
+                 "rewrite"       => array('slug' => 'formation-federale-hb'),
+            );
+
+            $taxoFormModulaire = array(
+                "label"          => "Formations Modulaires",
+                "labels"         => array(
+                     "name"           => "Formations Modulaires",
+                     "all_items"      => "Toutes les Formations Modulaires"),
+                 "hierarchical"  => true,
+                 "show_in_menu"  => true,
+                 "show_in_rest"  => true,
+                 "show_admin_column" => true,
+                 "rewrite"       => array('slug' => 'formation-federale-hb'),
+            );
+
+
+            $taxoFormComp = array(
+                "label"          => "Formations complémentaires",
+                "labels"         => array(
+                     "name"           => "Formations complémentaires",
+                     "all_items"      => "Toutes les Formations complémentaires",
+                     "edit_item"      => "Éditer une Formation complémentaire",
+                     "view_item"      => "Voir les Formations complémentaires",
+                     "update_item"    => "Mettre à jour les Formations complémentaires",
+                     "add_new_item"   => "Ajouter une nouvelle Formation complémentaire",
+                     "search_item"    => "Rehercher dans les Formations complémentaires"),
+                 "hierarchical"  => true,
+                 "show_in_menu"  => true,
+                 "show_in_rest"  => true,
+                 "show_admin_column" => true,
+                 "rewrite"       => array('slug' => 'formation-complementaire'),
+             );
+ 
 
 
     //FINANCEMENT
@@ -214,8 +308,16 @@ function idsfTheme_supports_init()
 
     register_post_type('idsf', $argsIdsf);
     register_taxonomy('organigramme', 'idsf', $taxoOrga );
+    register_taxonomy('sites/lieux', 'idsf', $taxoSites );
 
     register_post_type('formation', $argsFormation);
+    register_taxonomy('formationEtat', 'formation', $taxoFormEtat );
+    register_taxonomy('formationFedeHb', 'formation', $taxoFormFedeHB );
+    register_taxonomy('formationContinue', 'formation', $taxoFormContinue );
+    register_taxonomy('formationModulaire', 'formation', $taxoFormModulaire );
+    register_taxonomy('formationComp', 'formation', $taxoFormComp );
+
+
     register_post_type('financement', $argsFinancement);
     register_post_type('emplois', $argsEmplois);
     register_post_type('ressources', $argsRessources);

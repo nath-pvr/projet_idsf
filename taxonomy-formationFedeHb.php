@@ -12,7 +12,7 @@ get_header() ?>
         get_template_part("includes/part", "accesRap");
         ?>
 
-        <?php $roles = get_terms(['taxonomy' => 'organigramme']);
+        <?php $formsHb = get_terms(['taxonomy' => 'formationFedeHb']);
 
         ?>
 
@@ -21,7 +21,7 @@ get_header() ?>
 
 
 
-            <?php foreach ($roles as $role) :  ?>
+            <?php foreach ($formsHb as $formHb) :  ?>
 
                 <?php
 
@@ -31,9 +31,9 @@ get_header() ?>
                         'post_type'  => 'idsf',
                         'tax_query'  => array(
                             array(
-                                'taxonomy' => 'organigramme',
+                                'taxonomy' => 'sites/lieux',
                                 'field'    => 'term_id',
-                                'terms'    => $role->term_id,
+                                'terms'    => $formHb->term_id,
                             )
                         ),
                     )
@@ -41,7 +41,7 @@ get_header() ?>
 
                 <?php if ($my_query->have_posts()) :?>
 
-                    <h2><?= $role->name ?></h2>
+                    <h2><?= $formHb->name ?></h2>
 
                     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 

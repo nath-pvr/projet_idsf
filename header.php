@@ -12,7 +12,7 @@
 
 <body>
 
-    <?php if (is_front_page()) : ?>
+    <!-- <?php if (is_front_page()) : ?> -->
 
 
 
@@ -29,9 +29,10 @@
                                 'post_mime_type'    => 'image',
                                 'post_status'       => 'inherit',
                                 'posts_per_page'    => -1,
-                                'fields'            => 'ids',
                             )
+                            
                         );
+                        // var_dump($images);
 
                         $num_of_images = count($images);
                         $random_index = rand(0, $num_of_images);
@@ -42,7 +43,7 @@
 
                         $my_query = new WP_Query($image);
                         // var_dump($my_query);
-                        ?>
+                         ?>
                         <?php if ($my_query->have_posts()) : ?>
                             <div class="carousel-item active">
                                 <div><?= the_content('carousel-header') ?></div>
@@ -53,7 +54,7 @@
 
                             ?>
                             <div class="carousel-item">
-                                <div><?= the_content('carousel-header') ?></div>
+                                <div><?= var_dump(the_content('carousel-header')) ?></div>
                             </div>
 
                         <?php endwhile;
@@ -65,7 +66,7 @@
         </section>
 
 
-    <?php endif ?>
+    <!-- <?php endif ?> -->
 
 
     <nav class="navbar navbar-expand-lg bg-nav ">
