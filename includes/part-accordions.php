@@ -5,7 +5,7 @@
         <?php the_title() ?>
       </button>
     </h2>
-    <div id="collapse<?php the_ID()?>" class="accordion-collapse collapse" aria-labelledby="heading<?php the_ID()?>" data-bs-parent="#accordionFormationFede">
+    <div id="collapse<?php the_ID()?>" class="accordion-collapse collapse" aria-labelledby="heading<?php the_ID()?>" data-bs-parent="#accordionFormation">
       <div class="accordion-body">
         <?php the_excerpt() ?>
       </div>
